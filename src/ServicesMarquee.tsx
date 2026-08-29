@@ -1,4 +1,4 @@
-import MarqueeModule from "react-fast-marquee";
+import MarqueeImport from "react-fast-marquee";
 import { Sparkle } from "lucide-react";
 
 export default function ServicesMarquee() {
@@ -15,8 +15,7 @@ export default function ServicesMarquee() {
     "INJECTIBLES",
   ];
 
-  const Marquee = MarqueeModule.default;
-
+  const Marquee = (MarqueeImport as any).default ?? MarqueeImport;
 
   return (
     <div className="w-full border-y bg-foreground text-background dark:border-border">

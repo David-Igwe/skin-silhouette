@@ -10,4 +10,10 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  optimizeDeps: {
+    include: ['react-fast-marquee']
+  },
+  ssr: {
+    noExternal: ['react-fast-marquee']
+  }
 })
